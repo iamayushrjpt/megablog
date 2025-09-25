@@ -1,5 +1,0 @@
-
-
-const initialstate = {
-    status: t
-}
