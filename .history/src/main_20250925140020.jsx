@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
-import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter, createBrowserRouter, HashRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
 import Signup from './pages/Signup.jsx'
@@ -76,11 +76,13 @@ const router = createBrowserRouter([
         },
     ],
 },
-], { basename: "/megablog" })
+])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
+        <HashRouter>
       <RouterProvider router={router}/>
+      </HashRouter>
     </Provider>
   </StrictMode>,
 )

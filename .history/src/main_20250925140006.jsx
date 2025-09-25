@@ -76,10 +76,11 @@ const router = createBrowserRouter([
         },
     ],
 },
-], { basename: "/megablog" })
+])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
+        <has
       <RouterProvider router={router}/>
     </Provider>
   </StrictMode>,
