@@ -76,9 +76,7 @@ const router = createBrowserRouter([
         },
     ],
 },
-],{
-    basename: "/megablog",  // 👈 important
-  })
+],)
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
